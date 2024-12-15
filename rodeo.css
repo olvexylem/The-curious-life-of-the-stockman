@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { 
+    height: 100vh;
+    overflow-x: clip;
+    overflow: hidden;
+}
+
+.page{
+    position: relative;
+    min-height: 100vh;
+
+    background-color: pink;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    justify-content: center;
+    align-items:center;
+    display: flex;
+}
+
+
+.page#rodeo1{
+    background-image: url("Rodeo Files/Artboard/16colour-kimberly\ \(indexed\).png"); 
+}
+.page#rodeo2{
+    background-image: url("Rodeo Files/Artboard/16colour-desert\ \(indexed\).png"); 
+}
+.page#rodeo3{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png"); 
+}
+.page#rodeo4{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo5{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo6{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo7{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo8{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo9{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo10{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo11{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo12{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo13{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo14{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo15{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo16{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo17{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo18{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo19{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo20{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo21{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo22{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo23{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo24{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo25{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo26{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+.page#rodeo27{
+    background-image: url("Rodeo Files/Artboard/3colour-desert2\ \(indexed\).png");
+}
+
+a img{
+    width: 200px;
+    height: auto;
+
+    position: absolute;
+    z-index: +1;
+    right: 18vw;
+
+    transform: translate(0,-50%);
+}
+a img:hover{
+    scale: 105%;
+}
+
+.scene {
+    width: auto;
+    height: 90vh;
+}
+
+.rodeo-title{
+    position: absolute;
+    width: 50vw;
+    height: auto;
+
+    filter: invert();
+}
+
+.horses{
+    width: 50vw;
+    height: auto;
+    position: absolute;
+}
+
+.colin{
+    width: auto;
+    height: 100vh;
+}
+
+.maxie{
+    width: auto;
+    height: 100vh;
+}
+
+@font-face{
+    font-family: Kaerukaeru-Regular;
+    src: url(kaerukaeru-Regular.woff);
+
+    font-family: punk-font;
+    src: url(123And-2nwv.ttf);
+}
+
+.text-intro{
+    font-family: Kaerukaeru-Regular;
+    color: white;
+    text-shadow:black -1px;
+    font-size: 25px;
+    max-width: 30ch;
+    text-align: center;
+
+    border-inline: 3px white solid;
+    border-radius: 2%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-inline: 15px; 
+}
+
+
+.text-bullriders{
+    font-family: Kaerukaeru-Regular;
+    color: white;
+    text-shadow:black -1px;
+    font-size: 25px;
+    max-width: 25ch;
+    text-align: center;
+
+    border-inline: 3px white solid;
+    border-radius: 2%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-inline: 15px;
+
+    position: absolute;
+    bottom: 5vh;
+}
+
+.dialogue-text{
+    font-family: punk-font;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 2px;
+    max-width: 50ch;
+    position: absolute;
+}
+#maxie-text{
+   text-align: right;
+}
+#colin-text{
+   text-align: left;
+}
+
+.back-button{
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    top: 1.5vw;
+    left: 1.5vw;
+    z-index: +1;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+.back-button:hover{
+    scale: 105%;
+}

@@ -1,0 +1,652 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { 
+    height: 100vh;
+    width: 300vw;
+    overflow-y: clip;
+    display: flex;
+}
+
+.page{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    justify-content: center;
+    align-items:center;
+    display: flex;
+}
+
+body::-webkit-scrollbar {
+    width: auto;
+}  
+body::-webkit-scrollbar-thumb {
+    background-color: white;
+    outline: 2px solid black;
+}
+
+
+/*  */
+
+.cow-head-background{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: white;
+    z-index: +2;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    animation-name: cow-head-background;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes cow-head-background { 
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}  
+}
+
+.cow-head{
+    height: 300px;
+    width: auto;
+    z-index: +1;
+    position: absolute;
+}
+#half-one{
+    /* transform: translate(50%,0); */
+    animation-name: half-one;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes half-one { 
+    0% {transform: translate(51%,600px);}
+    50% {transform: translate(51%,0);}
+    99% {transform: translate(300px,0); opacity: 1;}
+    100% {opacity: 0;}  
+}
+#half-two{
+    /* transform: translate(-50%,0) scaleX(-1); */
+    animation-name: half-two;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes half-two { 
+    0% {transform: translate(-51%,600px) scaleX(-1);}
+    50% {transform: translate(-51%,0) scaleX(-1);}
+    99% {transform: translate(-300px,0) scaleX(-1); opacity: 1;}
+    100% {opacity: 0; transform: scaleX(-1);}  
+}
+
+
+.icon-sidebar{
+    width: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 2vw;
+    position: fixed;
+    z-index: +1;
+    gap: 20px;
+}
+.head-silhouette{
+    width: 50px;
+    height: auto;
+}
+
+/*  */
+
+.cow-sorter{
+    width: auto;
+    height: 700px;
+}
+
+.cow{
+    width: 100px;
+    height: auto;
+    position: absolute;
+}
+.cow{
+    fill: pink;
+}
+
+/* done */
+.freida{ 
+    width: 50px;
+    height: auto;
+    position: absolute;
+    transform: translate(0px,250px);
+    animation-name: freida;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+@keyframes freida { 
+    /* no 'animation-direction' --> animation loops */
+    
+    0% {transform: translate(0px,250px) scaleX(1);} 
+    /* filp */
+    12% {transform: translate(0px,250px) scaleX(1);}
+    15% {transform: translate(0px,250px) scaleX(-1);}
+    /* travels */
+    30% {transform: translate(200px,250px) scaleX(-1);}
+    /* reaches destination */
+    45% {transform: translate(200px,250px) scaleX(-1);}
+    /* flip */
+    57% {transform: translate(200px,250px) scaleX(-1);}
+    60% {transform: translate(200px,250px) scaleX(1);}
+    /* travels (backwards) */
+    75% {transform: translate(0px,250px) scaleX(1);} 
+    /* reaches (old) location */
+    90% {transform: translate(0px,250px) scaleX(1);}
+    /* idle */
+    100% {transform: translate(0px,250px) scaleX(1);}
+}
+
+/* done */
+#frank{
+    transform: translate(-500px,-200px);
+    animation-name: frank;
+    animation-duration: 38s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-delay: 2s;
+}
+@keyframes frank {
+    0% {transform: translate(-500px,-200px);}
+    /* goes down the line */
+    15%  {transform: translate(-270px,130px);}
+    /* turns right */
+    30%  {transform: translate(160px,-10px);}
+    /* enters pen */
+    40%  {transform: translate(180px,-100px);}
+    /* walks in pen */
+    45% {transform: translate(250px,-120px);}
+   
+    /* flip */
+    49% {transform: translate(250px,-120px) scaleX(1);}
+    50% {transform: translate(250px,-120px) scaleX(-1);}
+    /* walk out pen */
+    55%  {transform: translate(180px,-100px) scaleX(-1);}
+    /* exits pen */
+    65%  {transform: translate(160px,-10px) scaleX(-1);}
+    /* turns left */
+    80%  {transform: translate(-270px,130px) scaleX(-1);}
+    /* goes up the line, reaches (old) location */
+    95% {transform: translate(-500px,-200px)scaleX(-1);}
+    /* idle, and flips */
+    99% {transform: translate(-500px,-200px)scaleX(-1);}
+    100% {transform: translate(-500px,-200px)scaleX(1);}
+}
+
+/* done */
+#alex{
+    transform: translate(80px,-230px);
+    animation-name: alex;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+@keyframes alex {
+    0% {transform: translate(30px,-220px) scaleX(1);}
+    /* already facing direction (no flip needed), just idle rn */
+    5% {transform: translate(30px,-220px) scaleX(1);}
+    /* travels, reaches destination */
+    35% {transform: translate(70px,-220px) scaleX(1);}
+    /* flip */
+    47% {transform: translate(70px,-220px) scaleX(1);}
+    50% {transform: translate(70px,-220px) scaleX(-1);}
+    /* travels (backwards), reaches (old) location */
+    80% {transform: translate(30px,-220px) scaleX(-1);}
+    /* idle, and flips */
+    97% {transform: translate(30px,-220px) scaleX(-1);}
+    100% {transform: translate(30px,-220px) scaleX(1);}
+}
+
+/* done */
+#mel{
+    transform: translate(160px,-260px);
+    animation-name: mel;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-delay: 6s;
+}
+@keyframes mel {  
+    0% {transform: translate(160px,-260px) scaleX(1);}
+    /* already facing direction (no flip needed), just idle rn */
+    5% {transform: translate(160px,-260px) scaleX(1);}
+    /* travels, reaches destination */
+    35% {transform: translate(180px,-240px) scaleX(1);}
+    /* flip */
+    47% {transform: translate(180px,-240px) scaleX(1);}
+    50% {transform: translate(180px,-240px) scaleX(-1);}
+    /* travels (backwards), reaches (old) location */
+    80% {transform: translate(160px,-260px) scaleX(-1);}
+    /* idle, and flips */
+    97% {transform: translate(160px,-260px) scaleX(-1);}
+    100% {transform: translate(160px,-260px) scaleX(1);}
+}
+
+/* done */
+#pascal{
+    transform: translate(-200px,-280px) scaleX(-1);
+    animation-name: pascal;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-delay: 5s;
+}
+@keyframes pascal {  
+    0% {transform: translate(-200px,-280px) scaleX(-1);}
+    /* moves down-right */
+    5% {transform: translate(-350px,-250px) scaleX(-1);}
+    /* rounds the corner */
+    10% {transform: translate(-450px,-190px) scaleX(-1);}
+    /* reached fence hallway */
+    12% {transform: translate(-470px,-150px) scaleX(-1);}
+    /* flip */
+    13% {transform: translate(-470px,-150px) scaleX(-1);}
+    14% {transform: translate(-470px,-150px) scaleX(1);}
+
+    /* goes down the line */
+    20%  {transform: translate(-270px,130px);}
+    /* turns right */
+    30%  {transform: translate(160px,-10px);}
+    /* enters pen */
+    35%  {transform: translate(180px,-100px);}
+    /* walks in pen */
+    40% {transform: translate(250px,-120px);}
+   
+    /* flip */
+    48% {transform: translate(250px,-120px) scaleX(1);}
+    50% {transform: translate(250px,-120px) scaleX(-1);}
+    /* walk out pen */
+    55%  {transform: translate(180px,-100px) scaleX(-1);}
+    /* exits pen */
+    60%  {transform: translate(160px,-10px) scaleX(-1);}
+    /* turns left */
+    70%  {transform: translate(-270px,130px) scaleX(-1);}
+    /* goes up the line, reaches fence hallway */
+    80% {transform: translate(-470px,-150px)scaleX(-1);}
+    /* idle, and flips */
+    88% {transform: translate(-470px,-150px)scaleX(-1);}
+    90% {transform: translate(-470px,-150px)scaleX(1);}
+
+    /* rounds the corner (backwards) */
+    92% {transform: translate(-450px,-190px) scaleX(1);}
+    /* moves up-left */
+    95% {transform: translate(-350px,-250px) scaleX(1);}
+    /* reaches (old) location */
+    98% {transform: translate(-200px,-280px) scaleX(1);}
+    /* idle, and flips */
+    99% {transform: translate(-200px,-280px) scaleX(1);}
+    100% {transform: translate(-200px,-280px) scaleX(-1);}
+}
+
+/* done */
+#jeff{
+    transform: translate(350px,200px);
+    animation-name: jeff;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-delay: 6s;
+}
+@keyframes jeff {  
+    0% {transform: translate(350px,200px) scaleX(1);}
+    /* already facing direction (no flip needed), just idle rn */
+    3% {transform: translate(350px,200px) scaleX(1);}
+    /* rounds the bend */
+    28% {transform: translate(500px,150px) scaleX(1);}
+    /* reaches destination */
+    53% {transform: translate(600px,40px) scaleX(1);}
+    /* flip */
+    57% {transform: translate(600px,40px) scaleX(1);}
+    58% {transform: translate(600px,40px) scaleX(-1);}
+    
+    /* rounds the bend (backwards) */
+    80% {transform: translate(500px,150px) scaleX(-1);}
+    /* reaches (old) location */
+    95% {transform: translate(350px,200px) scaleX(-1);}
+    /* idle, and flips */
+    97% {transform: translate(350px,200px) scaleX(-1);}
+    100% {transform: translate(350px,200px) scaleX(1);}
+}
+
+.ringer{
+    width: 80px;
+    height: auto;
+    position: absolute;
+}
+
+#john{
+    transform: translate(-520px,80px) scaleX(-1);
+    animation-name: john;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+@keyframes john {  
+    0% {transform: translate(-520px,80px) scaleX(-1);}
+    /* already facing direction (no flip needed), just idle rn */
+    5% {transform: translate(-520px,80px) scaleX(-1);}
+    /* travels, reaches destination */
+    45% {transform: translate(-480px,140px) scaleX(-1);}
+    /* idle */
+    65% {transform: translate(-480px,140px) scaleX(-1);}
+    /* travels (backwards), reaches (old) location */
+    95% {transform: translate(-520px,80px) scaleX(-1);}
+    /* idle */
+    100% {transform: translate(-520px,80px) scaleX(-1);}
+}
+
+#nami{
+    transform: translate(480px,-400px);
+}
+#caroline{
+    transform: translate(570px,-360px);
+}
+#jeremy{
+    transform: translate(660px,-320px);
+}
+#loui{
+    transform: translate(590px,-300px) scaleX(-1);
+}
+#elliot{
+    transform: translate(480px,-200px) scaleX(-1);
+}
+#eva{
+    transform: translate(600px,-200px);
+}
+#robert{
+    transform: translate(705px,-150px) scaleX(-1);
+}
+
+
+/* ------cattle enterance------- */
+
+/* @keyframes move-out {
+    0% {
+        transform: translate(0,0);
+    }
+    99%{
+        z-index: +1;
+    }
+    100% {
+        transform: translate(100%,0);
+        z-index: -1;
+    }
+  }
+.matt-glass{    
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    border: 1px black solid;
+    background-color: beige;
+    opacity: 80%;
+    z-index: +1;
+
+    transform: translate(0,0);
+}
+.matt-glass:focus {
+    animation: move-out 4s ease-in-out backwards;
+  }
+  .matt-glass:active {
+    animation: none;
+  } */
+
+.stable-shed{
+    position: absolute;
+    width: auto;
+    height: 510px;
+    transform: rotate(-15deg) translate(-200px,-400px);
+}
+
+#du{
+    transform: translate(-600px,-100px);
+    z-index: +1;
+}
+
+.veggie-garden{
+    position: absolute;
+    width: auto;
+    height: 300px;
+}
+#garden2{
+    transform: translate(300px,-170px) rotate(5deg);
+    /* transform: translate(450px,0); */
+}
+
+/* done */
+#jaehyun{
+    transform: translate(-600px,80px) scaleX(-1);
+    animation-name: jaehyun;
+    animation-duration: 70s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    z-index: +1;
+}
+@keyframes jaehyun {  
+    /* no idle */
+    0% {transform: translate(-500px,80px) scaleX(-1);}
+    7% {transform: translate(-400px,150px) scaleX(-1);}
+    9.5% {transform: translate(-300px,180px) scaleX(-1);}
+    22% {transform: translate(200px,180px) scaleX(-1);}
+    32% {transform: translate(400px,100px) scaleX(-1);}
+    /* flip */
+    41% {transform: translate(400px,100px) scaleX(-1);}
+    43% {transform: translate(400px,100px) scaleX(1);}
+    /* travels (backwards) */
+    52% {transform: translate(200px,200px) scaleX(1);}
+    72% {transform: translate(-300px,200px) scaleX(1);}
+    /* stops */
+    74% {transform: translate(-300px,200px) scaleX(1);}
+    75% {transform: translate(-300px,200px) scaleX(-1);}
+    77% {transform: translate(-300px,200px) scaleX(-1);}
+    78% {transform: translate(-300px,200px) scaleX(1);}
+    80% {transform: translate(-300px,200px) scaleX(1);}
+    /* continues */
+    85% {transform: translate(-400px,150px) scaleX(1);}
+    90% {transform: translate(-500px,80px) scaleX(1);}
+    /* reaches (old) location, flip */
+    99% {transform: translate(-500px,80px) scaleX(1);}
+    100% {transform: translate(-500px,80px) scaleX(-1);}
+}
+
+/* done */
+#yin{
+    transform: translate(-200px,-365px) scaleX(-1);
+    animation-name: yin;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+@keyframes yin {  
+    0% {transform: translate(-200px,-365px) scaleX(-1);}
+    10% {transform: translate(-200px,-365px) scaleX(-1);}
+    30% {transform: translate(0px,-290px) scaleX(-1);}
+    45% {transform: translate(100px,-300px) scaleX(-1);}
+    /* flip */
+    47% {transform: translate(100px,-300px) scaleX(-1);}
+    50% {transform: translate(100px,-300px) scaleX(1);}
+    /* travels (background) */
+    60% {transform: translate(0px,-300px) scaleX(1);}
+    70% {transform: translate(-200px,-365px) scaleX(1);}
+    /* return, flip */
+    75% {transform: translate(-200px,-365px) scaleX(1);}
+    97% {transform: translate(-200px,-365px) scaleX(1);}
+    100% {transform: translate(-200px,-365px) scaleX(-1);}
+}
+
+#bob{
+    transform: translate(-655px,-215px);
+}
+
+.grazing-horse{
+    width: 100px;
+    height: auto;
+}
+#keanu{
+    transform: translate(160px,-120px);
+}
+#maria{
+    transform: translate(-150px,-150px) scaleX(-1);
+}
+
+#pluto{
+    transform: translate(400px,0px) scaleX(-1);
+}
+
+#craig{
+    transform: translate(200px,-300px) scaleX(-1);
+    animation-name: craig;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+@keyframes craig {  
+    0% {transform: translate(200px,-300px) scaleX(-1);}
+    22% {transform: translate(350px,-350px) scaleX(-1);}
+    44% {transform: translate(450px,-300px) scaleX(-1);}
+    /* stagnant, flip */
+    49% {transform: translate(450px,-300px) scaleX(-1);}
+    50% {transform: translate(450px,-300px) scaleX(1);}
+    /* continue */
+    72% {transform: translate(350px,-350px) scaleX(1);}
+    94% {transform: translate(200px,-300px) scaleX(1);}
+    /* stagnant, flip */
+    99% {transform: translate(200px,-300px) scaleX(1);}
+    100% {transform: translate(200px,-300px) scaleX(-1);}
+}
+#daniel{
+    transform: translate(520px,-300px) scaleX(-1);
+}
+#cooper{
+    transform: translate(550px,-200px) scaleX(1);
+}
+#lachlan{
+    transform: translate(500px,-250px) scaleX(1);
+}
+
+
+.house{
+    width: 800px;
+    height: auto;
+    position: absolute;
+    transform: translate(-200px,-100px) scaleX(-1) rotateY(20deg);
+}
+
+.sheep{
+    width: 80px;
+    height: auto;
+    position: absolute;
+}
+#cassarole{
+    transform: translate(-220px,20px);
+}
+#miami{
+    transform: translate(-400px,200px);
+}
+
+#chicago{
+    transform: translate(-500px,150px);
+    animation-name: chicago;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+@keyframes chicago {  
+    0% {transform: translate(-500px,150px) scaleX(-1);}
+    /* already facing direction (no flip needed), just idle rn */
+    5% {transform: translate(-500px,150px) scaleX(-1);}
+    /* travels, reaches destination */
+    45% {transform: translate(-400px,150px) scaleX(-1);}
+    /* idle */
+    65% {transform: translate(-400px,150px) scaleX(-1);}
+    68% {transform: translate(-400px,150px) scaleX(1);}
+    /* travels (backwards), reaches (old) location */
+    95% {transform: translate(-500px,150px) scaleX(1);}
+    /* idle */
+    97% {transform: translate(-500px,150px) scaleX(1);}
+    100% {transform: translate(-500px,150px) scaleX(-1);}
+}
+
+
+#felix{
+    transform: translate(-300px,100px) scaleX(-1);
+}
+#alice{
+    transform: translate(-700px,100px);
+}
+
+.ute{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    transform: translate(350px,150px) rotate(5deg);
+}
+
+.water-well{
+    width: auto;
+    height: 400px;
+    position: absolute;
+    transform: translate(600px,260px);
+}
+
+.olivia{
+    width: auto;
+    height: 140px;
+    position: absolute;
+    transform: translate(-300px,-50px);
+}
+
+.back-button{
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    top: 1.5vw;
+    left: 1.5vw;
+    z-index: +3;
+    color: black;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+.back-button:hover{
+    scale: 105%;
+}
+
+.motorbike{
+    width: 100px;
+    height: auto;
+    position: absolute; 
+}
+#motorbike-one{
+    transform: translate(350px,-100px);
+}
+#motorbike-two{
+    transform: translate(500px,200px);
+}
+
+#herb{
+    transform: translate(500px,0px);
+}

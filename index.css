@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { 
+    height: 100vh;
+}
+
+.page{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    /* background-color: rgb(184, 195, 138); */
+    /* background-color: rgb(134, 133, 86); */
+    background-color: rgb(170, 170, 127);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    justify-content: center;
+    align-items:center;
+    display: flex; 
+
+    overflow: hidden;
+}
+
+@font-face{
+    font-family: Kaerukaeru-Regular;
+    src: url(kaerukaeru-Regular.woff);
+
+    font-family: punk-font;
+    src: url(123And-2nwv.ttf);
+}
+
+.Songlines-icon{
+    width: auto;
+    height: 450px;
+    position: absolute;
+    border: 2px black solid;
+    background-color: white;
+    transform: translate(-40%,-50%) rotate(6deg);
+    border-radius: 5px;
+    padding: 10px;
+}
+.Songlines-icon:hover{
+    background-color: pink;
+    scale: 101%;
+}
+
+#Wahroonga-Station-icon{
+    width: 500px;
+    height: auto;
+    position: absolute;
+    transform: translate(-130%,-65%) rotate(-30deg) scaleY(-1);
+    overflow: visible;
+    transform-origin: center center;
+}
+#Wahroonga-Station-icon:hover{
+    scale: 101%;
+}
+
+#Rodeo-icon{
+    width: 350px;
+    height: auto;
+    position: absolute;
+    transform: translate(22vw,-100px) rotate(-320deg);
+    overflow: visible;
+    transform-origin: center center;
+}
+#Rodeo-icon:hover{
+    scale: 101%;
+}
+
+    .title{
+    position: absolute;
+    top: 100px;
+    font-family: Kaerukaeru-Regular;
+    font-size: 6.5vw;
+        z-index: +1;
+    }
+    .subtitle{
+    position: absolute;
+    top: 95px;
+    right: 3vw;
+    font-family: Kaerukaeru-Regular;
+    font-size: 20px;
+    }
+
+/*  */
+.icon-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hover-text {
+    position: absolute;
+        width: fit-content;
+        text-align: left;
+
+    white-space: nowrap;
+    overflow: hidden;    
+    text-overflow: ellipsis; 
+        
+    transform: translate(-48vw,36vh);
+        font-family:Kaerukaeru-Regular;
+        font-size: 27px;
+    color: black;
+
+    padding: 10px;
+    display: none;
+    z-index: +1;
+  }
+  
+  .icon-container:hover .hover-text {
+    display: block;
+  }
+/*  */
+
+.line-border{
+    /* border: 3px white; */
+    /* border-style: solid dashed solid dashed; */
+    border-radius: 5px;
+    width: 90vw;
+    height: 90vh;
+    position: absolute;
+
+    justify-content: center;
+    align-items:center;
+    display: flex; 
+}
+
+.white-graphic{
+    position: absolute;
+    bottom: 5vh;
+    width: 80vw;
+    height: auto;
+}
+
+.instruction{
+    position: absolute;
+    bottom: 75px;
+    right: 3vw;
+    font-family: Courier;
+        font-size: 18px;
+        word-spacing: -3px;
+        letter-spacing: -1px;
+        font-style: italic;
+}
+
